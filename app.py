@@ -21,4 +21,5 @@ st.write("Enter student details to predict the final grade (G3).")
 # Example input fields (you can expand these as per your dataset features)
 age = st.number_input("Age", min_value=15, max_value=22, value=18)
 studytime = st.number_input("Weekly Study Time (1-4)", min_value=1, max_value=4, value=2)
-failures = st.number_input("Past Class Failures", min_value=0, max_value=4_
+failures = st.number_input("Past Class Failures", min_value=0, max_value=4, value=0)
+
