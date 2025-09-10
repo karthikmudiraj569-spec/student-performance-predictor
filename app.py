@@ -62,6 +62,7 @@ if submitted:
     prediction = model.predict(input_scaled)[0]
     st.success(f"📘 Predicted Final Grade (G3): **{prediction:.2f}**")
 
+feature_columns = joblib.load(os.path.join(BASE_DIR, "models", "features.pkl"))
 
 
 
