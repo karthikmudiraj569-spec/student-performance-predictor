@@ -12,9 +12,6 @@ with open("models/model.pkl", "rb") as f:
 with open("models/scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
 
-with open("models/feature_columns.pkl", "rb") as f:
-    feature_columns = pickle.load(f)
-
 st.title("🎓 Student Performance Predictor")
 st.markdown("Enter student details below to predict the final grade (G3):")
 
@@ -84,5 +81,6 @@ st.write("Enter student details to predict the final grade (G3).")
 age = st.number_input("Age", min_value=15, max_value=22, value=18)
 studytime = st.number_input("Weekly Study Time (1-4)", min_value=1, max_value=4, value=2)
 failures = st.number_input("Past Class Failures", min_value=0, max_value=4, value=0)
+
 
 
