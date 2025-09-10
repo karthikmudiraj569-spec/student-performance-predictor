@@ -49,9 +49,7 @@ if submitted:
     input_encoded = pd.get_dummies(input_df)
 
     # Add missing columns
-    for col in feature_columns:
-        if col not in input_encoded.columns:
-            input_encoded[col] = 0
+  feature_columns = joblib.load(os.path.join(BASE_DIR, "models", "features.pkl"))
 
     input_encoded = input_encoded[feature_columns]  # Reorder columns
 
@@ -62,7 +60,7 @@ if submitted:
     prediction = model.predict(input_scaled)[0]
     st.success(f"📘 Predicted Final Grade (G3): **{prediction:.2f}**")
 
-feature_columns = joblib.load(os.path.join(BASE_DIR, "models", "features.pkl"))
+
 
 
 
